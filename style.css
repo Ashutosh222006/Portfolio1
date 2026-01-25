@@ -1,0 +1,1169 @@
+/* --- PROFESSIONAL VARIABLES --- */
+:root {
+    --bg-color: #050505;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --primary-gradient: linear-gradient(135deg, #6366f1, #a855f7);
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --font-main: 'Inter', sans-serif;
+}
+
+/* --- RESET & BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    /* Text rendering sharp karne ke liye */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* --- 3D CANVAS BACKGROUND --- */
+#bg-3d {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* --- HEADER (ULTRA NEON STYLE) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 8%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Frosted Glass Effect */
+    background: rgba(5, 5, 5, 0.7);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+/* Neon Hover Logic */
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #a855f7, 0 0 20px #a855f7;
+    transform: scale(1.1);
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #a855f7;
+    transition: width 0.3s;
+    box-shadow: 0 0 10px #a855f7;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Scroll Progress Bar */
+.scroll-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6366f1, #a855f7, #00ffea);
+    width: 0%;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+    transition: width 0.1s;
+    z-index: 1001;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6rem 10% 0 10%;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.accent {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+
+/* Photo Styling */
+.hero-photo img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 50px rgba(99, 102, 241, 0.15);
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+/* Typing Effect */
+.typing-text {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+    font-weight: 500;
+    min-height: 40px;
+}
+
+#typewriter {
+    color: #a855f7;
+    font-weight: 700;
+    text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+}
+
+.cursor-blink {
+    color: white;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--primary-gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 1px solid transparent;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: 10px;
+    position: relative;
+    /* Z-index fix for card */
+    z-index: 2;
+}
+
+.btn-outline:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- CARDS: SNAKE BORDER EFFECT (Line Running on Hover) --- */
+.glass-card {
+    position: relative;
+    background: #0c0c10;
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    transition: transform 0.3s ease;
+}
+
+/* The Running Line */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: conic-gradient(transparent 0deg,
+            transparent 270deg,
+            #a855f7 360deg);
+    transform: translate(-50%, -50%);
+    animation: rotateSnake 3s linear infinite;
+    z-index: -2;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Card Inner Mask */
+.glass-card::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #0c0c10;
+    border-radius: 14px;
+    z-index: -1;
+}
+
+/* Hover Effects */
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+.glass-card:hover {
+    border-color: transparent;
+    transform: translateY(-5px);
+}
+
+@keyframes rotateSnake {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Card Content Fixes */
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+}
+
+.glass-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.glass-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- SECTIONS --- */
+section {
+    padding: 6rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    font-weight: 800;
+    color: white;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* --- TIMELINE --- */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: var(--primary-gradient);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -8px;
+    background: #050505;
+    border: 3px solid #a855f7;
+    top: 24px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 8px #a855f7;
+}
+
+.timeline-item.right::after {
+    left: -8px;
+}
+
+.content {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.content:hover {
+    transform: translateY(-5px);
+    border-color: #a855f7;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.grade {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 4px 12px;
+    background: var(--primary-gradient);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* --- TECH SLIDER --- */
+.slider {
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.slide-track {
+    animation: scroll 20s linear infinite;
+    display: flex;
+    width: calc(200px * 16);
+}
+
+.slide {
+    height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.slide i {
+    font-size: 2rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-200px * 8));
+    }
+}
+
+/* --- FAQ --- */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-item {
+    cursor: pointer;
+    padding: 1.2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question h3 {
+    font-size: 1rem;
+    gap: 10px;
+    color: white;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s ease;
+    opacity: 0;
+    color: var(--text-muted);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 150px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+    color: #6366f1;
+}
+
+/* --- CONTACT FORM --- */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info,
+.contact-form {
+    padding: 2rem;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.social-icons-contact {
+    display: flex;
+    gap: 15px;
+    margin-top: 1.5rem;
+}
+
+.social-icons-contact a {
+    font-size: 1.4rem;
+    color: white;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    width: 100%;
+}
+
+.btn-full {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* --- CHATBOT --- */
+.chat-circle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    background: var(--primary-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
+}
+
+.chatbot {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 320px;
+    background: rgba(10, 10, 15, 0.95);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+}
+
+.chatbot.show {
+    display: flex;
+}
+
+.chat-header {
+    background: linear-gradient(90deg, #6366f1, #a855f7);
+    padding: 1rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-messages {
+    height: 300px;
+    padding: 1rem;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-message {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    max-width: 80%;
+}
+
+.bot-message {
+    background: #2a2a35;
+    align-self: flex-start;
+}
+
+.user-message {
+    background: #6366f1;
+    align-self: flex-end;
+    color: white;
+}
+
+#chat-input {
+    padding: 1rem;
+    background: transparent;
+    border: none;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    margin-top: 4rem;
+}
+
+/* --- ANIMATIONS --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE)
+   ========================================= */
+
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 8rem;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+
+    .hero p {
+        margin: 1.5rem auto;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 5%;
+    }
+
+    .timeline::after {
+        left: 20px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+    }
+
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-item::after {
+        left: 13px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-photo img {
+        width: 250px !important;
+        height: 250px !important;
+        transform: none !important;
+        perspective: none !important;
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+    }
+
+    .chatbot {
+        width: 90%;
+        right: 5%;
+        bottom: 90px;
+    }
+
+    /* Fix Snake Effect on Mobile (Performance) */
+    .glass-card::before {
+        width: 150%;
+        height: 150%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .btn-outline {
+        margin-left: 0;
+    }
+
+    .glass-card {
+        padding: 1.5rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* --- HACKER BOOT SCREEN CSS --- */
+#boot-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+}
+
+.terminal-loader {
+    width: 300px;
+    color: #0f0;
+    /* Hacker Green */
+}
+
+.text {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #0f0;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: #111;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #0f0;
+    box-shadow: 0 0 15px #0f0;
+    animation: loadSystem 2.5s ease-in-out forwards;
+}
+
+.status-log p {
+    font-size: 0.8rem;
+    color: #0f0;
+    opacity: 0;
+    margin: 5px 0;
+    animation: typeLog 0.5s forwards;
+}
+
+.status-log p:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.status-log p:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+.status-log p:nth-child(3) {
+    animation-delay: 1.8s;
+}
+
+.status-log p.success {
+    color: #00ffea;
+    font-weight: bold;
+    animation-delay: 2.3s;
+    text-shadow: 0 0 10px #00ffea;
+}
+
+@keyframes loadSystem {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes typeLog {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- KNOWLEDGE HUB: NEON LIBRARY STYLE --- */
+
+.book-card {
+    padding: 0 !important;
+    /* Default padding hata di */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+/* 1. BOOK COVER (Upper colorful part) */
+.book-cover {
+    height: 140px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* Spine effect (Book jaisa dikhe) */
+    border-bottom: 5px solid rgba(0, 0, 0, 0.2);
+}
+
+/* 2. THE STICKERS (Floating Icons) */
+.sticker {
+    font-size: 3.5rem;
+    /* Bada Icon */
+    color: white;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+    /* Shadow taaki sticker utha hua lage */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cover-text {
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 2px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover Effect: Sticker Pop Karega */
+.book-card:hover .sticker {
+    transform: scale(1.2) rotate(-5deg);
+    /* Thoda bada aur tedha hoga */
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+/* 3. VIBRANT GRADIENTS (Alag alag colors) */
+.gradient-1 {
+    background: linear-gradient(135deg, #FF6B6B, #556270);
+    /* Red-Grey */
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.gradient-2 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    /* Electric Blue */
+}
+
+.gradient-3 {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    /* Neon Green */
+}
+
+.gradient-4 {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    /* Pink-Yellow */
+}
+
+/* 4. BOOK INFO (Neeche wala part) */
+.book-info {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    flex-grow: 1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.book-info h3 {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.book-info p {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+/* Tags Styling */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================
+   ZIG-ZAG CIRCUIT TIMELINE (CONNECTED)
+   ========================================= */
+
+.journey-section {
+    padding: 4rem 0;
+    overflow-x: hidden;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* 1. CENTER VERTICAL LINE (The Backbone) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Grey Path */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+    z-index: 0;
+}
+
+/* 2. TIMELINE ITEMS (Layout) */
+.timeline-item {
+    padding: 10px 60px;
+    /* Thoda gap diya taaki connecting line dikhe */
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item.left {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item.right {
+    left: 50%;
+    text-align: left;
+}
+
+/* 3. ZIG-ZAG CONNECTORS (Ye hai wo horizontal line) */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    /* Dot ke level pe */
+    width: 60px;
+    /* Line ki lambayi */
+    height: 4px;
+    /* Line ki motayi */
+    background: rgba(255, 255, 255, 0.1);
+    /* Grey Line */
+    z-index: 1;
+    transition: 0.3s;
+}
+
+/* Left Card ki Line (Right taraf jayegi) */
+.timeline-item.left::before {
+    right: 0;
+}
+
+/* Right Card ki Line (Left taraf jayegi) */
+.timeline-item.right::before {
+    left: 0;
+}
+
+/* Hover par Line GLOW karegi (Circuit Effect) */
+.timeline-item:hover::before {
+    background: #00ffea;
+    /* Cyan Glow */
+    box-shadow: 0 0 10px #00ffea;
+}
+
+/* 4. THE DOTS (Center Joints) */
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #050505;
+    border: 3px solid #6366f1;
+    /* Blue Border */
+    top: 32px;
+    /* Line ke saath align */
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+/* Dot Positions (Bilkul Center Line par) */
+.timeline-item.left .timeline-dot {
+    right: -12px;
+}
+
+.timeline-item.right .timeline-dot {
+    left: -12px;
+}
+
+/* Hover par Dot Blast karega */
+.timeline-item:hover .timeline-dot {
+    background: #00ffea;
+    border-color: #fff;
+    transform: scale(1.4);
+    box-shadow: 0 0 20px #00ffea, 0 0 40px #a855f7;
+}
+
+/* 5. CONTENT BOX (Card) */
+.timeline-content {
+    padding: 20px;
+    border-radius: 12px;
+    position: relative;
+    background: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+
+/* Card Hover */
+.timeline-content:hover {
+    transform: translateY(-5px);
+    border-color: #a855f7;
+}
+
+/* --- MOBILE FIX (Line Left mein aa jayegi) --- */
+@media (max-width: 768px) {
+
+    /* Center line ko left shift karo */
+    .timeline::after {
+        left: 30px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 80px;
+        /* Jagah banao */
+        padding-right: 20px;
+        text-align: left;
+    }
+
+    .timeline-item.right {
+        left: 0;
+    }
+
+    /* Dots ko left line par lao */
+    .timeline-item.left .timeline-dot,
+    .timeline-item.right .timeline-dot {
+        left: 18px;
+        right: auto;
+    }
+
+    /* Connecting Lines (Zig Zag) ko adjust karo */
+    .timeline-item::before {
+        width: 50px;
+        /* Choti line */
+        left: 30px;
+        /* Line se shuru hogi */
+        right: auto;
+    }
+
+    .timeline-item.left::before {
+        right: auto;
+        /* Default hataya */
+        left: 30px;
+    }
+}
