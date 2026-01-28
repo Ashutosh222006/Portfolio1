@@ -212,39 +212,48 @@ function getSmartReply(text) {
 
 // --- 8. TYPING EFFECT (NO GATE ASPIRANT) ---
 const words = [
-    "Computer Science Student", 
-    "Gen AI Developer", 
-    "Python & Java Coder"
+    "Final-year B.Tech CSE Student", 
+    "Backend Engineering Enthusiast", 
+    "Java Developer",              // Added comma
+    "API & Database Developer",    // Added comma
+    "Tech Learner"
 ];
+
 let i = 0;
 let timer;
 
 function typeWriter() {
     const heading = document.getElementById("typewriter");
     if (!heading) return;
+
     const word = words[i];
     let currentText = heading.textContent;
+
     if (!heading.classList.contains("deleting")) {
+        // Typing Logic
         if (currentText.length < word.length) {
             heading.textContent = word.substring(0, currentText.length + 1);
             timer = setTimeout(typeWriter, 100);
         } else {
+            // Word complete, wait then start deleting
             heading.classList.add("deleting");
             timer = setTimeout(typeWriter, 2000);
         }
     } else {
+        // Deleting Logic
         if (currentText.length > 0) {
             heading.textContent = word.substring(0, currentText.length - 1);
             timer = setTimeout(typeWriter, 50);
         } else {
+            // Deleted, move to next word
             heading.classList.remove("deleting");
             i = (i + 1) % words.length;
             timer = setTimeout(typeWriter, 500);
         }
     }
 }
-document.addEventListener('DOMContentLoaded', typeWriter);
 
+document.addEventListener('DOMContentLoaded', typeWriter);
 
 
 
