@@ -7,411 +7,476 @@
     <title>Ashutosh Shukla | Professional Portfolio</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 </head>
 
 <body>
     <div id="boot-screen">
-    <div class="terminal-loader">
-        <div class="text">SYSTEM INITIALIZING...</div>
-        <div class="progress-bar"><div class="progress"></div></div>
-        <div class="status-log">
-            <p>> Loading Core Modules...</p>
-            <p>> Connecting to Neural Network...</p>
-            <p>> Accessing Portfolio Data...</p>
-            <p class="success">> ACCESS GRANTED</p>
+        <div class="terminal-loader">
+            <div class="text">SYSTEM INITIALIZING...</div>
+            <div class="progress-bar"><div class="progress"></div></div>
+            <div class="status-log">
+                <p>> Loading Core Modules...</p>
+                <p>> Connecting to Neural Network...</p>
+                <p>> Accessing Portfolio Data...</p>
+                <p class="success">> ACCESS GRANTED</p>
+            </div>
         </div>
     </div>
-</div>
     <canvas id="bg-3d"></canvas>
 
-  <header>
-    <a href="#" class="logo">Ashutosh<span class="accent">.</span></a>
+    <header>
+        <a href="#" class="logo">Ashutosh<span class="accent">.</span></a>
+        
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certificates</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" id="hamburger-menu"><i class="fas fa-bars"></i></button>
+
+        <div class="scroll-progress"></div> 
+    </header>
     
-    <nav>
-        <ul id="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <button class="hamburger" id="hamburger-menu"><i class="fas fa-bars"></i></button>
-
-    <div class="scroll-progress"></div> 
-</header>
     <main>
-
-        <section class="hero">
+        <section id="home" class="hero">
             <div class="hero-text reveal">
                 <h1>Hello, I'm <br><span class="accent">Ashutosh Shukla</span></h1>
-<h2 class="typing-text">I am a <span id="typewriter"></span><span class="cursor-blink">|</span></h2>
-<p>Final-year B.Tech CSE student focused on <strong>Java backend development</strong>, creating <strong>REST APIs</strong> and database-driven applications.</p>
+                <h2 class="typing-text">I am a <span id="typewriter"></span><span class="cursor-blink">|</span></h2>
+                <p>Final-year B.Tech CSE student | <strong>AI Intern @ HCLTech</strong> | Focused on <strong>Java backend development</strong>, creating <strong>REST APIs</strong> and enterprise applications.</p>
                 <div class="btn-group">
                     <a href="#projects" class="btn">View My Work</a>
                     <a href="#contact" class="btn btn-outline">Hire Me</a>
                 </div>
             </div>
             <div class="hero-photo reveal">
-                <img src="image.jpg" alt="Ashutosh Shukla"
-                    onerror="this.src='https://placehold.co/350x350/222/fff?text=Ashutosh';">
+                <img src="image.jpg" alt="Ashutosh Shukla" onerror="this.src='https://placehold.co/350x350/222/fff?text=Ashutosh';">
             </div>
         </section>
 
         <section id="about" class="reveal">
             <h2 class="section-title">About Me</h2>
             <div class="glass-card text-center" data-tilt>
-               <p>
-I’m Ashutosh Shukla, a final-year Computer Science student at BBD University. I have a strong foundation in core Computer Science subjects and <strong>Data Structures & Algorithms</strong>, which helps me solve problems logically and efficiently.
+                <p>
+I’m Ashutosh Shukla, a Computer Science student at BBD University transitioning to my final year. I have a strong foundation in core Computer Science subjects and <strong>Data Structures & Algorithms</strong>, which helps me solve problems logically and efficiently.
 <br><br>
-I am currently focused on <strong>Java backend development</strong>, building <strong>REST APIs</strong>, and working with <strong>SQL databases</strong>. I have developed multiple web-based projects that strengthened my understanding of application development, API integration, and responsive design.
+Currently working as an <strong>AI Intern at HCLTech</strong> and training as a <strong>Java Full Stack Developer</strong> at Precursor Info Solutions. I am focused on building <strong>REST APIs</strong>, enterprise applications using JDBC/Servlets/Spring Boot, and working with <strong>SQL databases</strong>. 
 <br><br>
-Alongside academics, I continuously improve my technical skills through hands-on practice and real projects. I am looking for internship opportunities where I can apply my knowledge, gain industry experience, and contribute to meaningful software solutions.
-</p>
+Alongside academics, I continuously improve my technical skills through hands-on practice (like LeetCode) and real projects. I am looking for opportunities where I can apply my knowledge, gain industry experience, and contribute to meaningful software solutions.
+                </p>
+            </div>
+        </section>
 
+        <!-- ADDED EXPERIENCE SECTION HERE WITHOUT DELETING ANYTHING ELSE -->
+        <section id="experience" class="reveal">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item left" data-tilt>
+                    <div class="content active-sem">
+                        <h3>AI Intern</h3>
+                        <p class="accent"><strong>HCLTech</strong> | Jul 2026 – Present</p>
+                        <p>Selected for the LITMUS AI Internship Programme. Gaining hands-on exposure to AI concepts, teamwork, and professional software development practices.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right" data-tilt>
+                    <div class="content active-sem">
+                        <h3>Java Full Stack Trainee</h3>
+                        <p class="accent"><strong>Precursor Info Solutions Pvt. Ltd.</strong> | Feb 2026 – Present</p>
+                        <p>Completed Core Java with an A+ Grade. Currently advancing in Advanced Java (JDBC, Servlets, JSP, SQL) with Spring Boot and REST APIs next in pipeline.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left" data-tilt>
+                    <div class="content">
+                        <h3>Home Tutor</h3>
+                        <p class="accent"><strong>Self-Employed</strong> | Apr 2024 – Present</p>
+                        <p>Providing one-on-one mathematics and science tutoring. Strengthening communication, patience, and effective time management.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="strengths" class="reveal">
-    <h2 class="section-title">My Strengths</h2>
-    <div class="cards-container">
-
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-lightbulb card-icon"></i>
-            <h3>Analytical Problem-Solving</h3>
-            <p>Strong problem-solving ability using Data Structures & Algorithms to write efficient and logical code.</p>
-        </div>
-
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-book card-icon"></i>
-            <h3>Backend Development</h3>
-            <p>Focused on Java backend development, building REST APIs, and working with SQL databases.</p>
-        </div>
-
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-users card-icon"></i>
-            <h3>Effective Communication</h3>
-            <p>Clear communication and teamwork skills developed through teaching and project collaboration.</p>
-        </div>
-
-    </div>
-</section>
-
-       <section id="journey" class="reveal">
-    <h2 class="section-title">My Journey</h2>
-    <div class="timeline">
-
-        <div class="timeline-item left" data-tilt>
-            <div class="content">
-                <h3>2023 - Semester 1</h3>
-                <p>Started B.Tech journey and built a strong programming foundation with <strong>C Programming</strong>.</p>
-                <span class="grade">SGPA: 8.58</span>
+            <h2 class="section-title">My Strengths</h2>
+            <div class="cards-container">
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-lightbulb card-icon"></i>
+                    <h3>Analytical Problem-Solving</h3>
+                    <p>Strong problem-solving ability using Data Structures & Algorithms to write efficient and logical code.</p>
+                </div>
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-book card-icon"></i>
+                    <h3>Backend Development</h3>
+                    <p>Focused on Java backend development, building REST APIs, and working with SQL databases.</p>
+                </div>
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-users card-icon"></i>
+                    <h3>Effective Communication</h3>
+                    <p>Clear communication and teamwork skills developed through teaching and project collaboration.</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="timeline-item right" data-tilt>
-            <div class="content">
-                <h3>2024 - Semester 2</h3>
-                <p>Improved problem-solving skills and explored <strong>Python</strong> and basic programming concepts.</p>
-                <span class="grade">SGPA: 8.73</span>
+        <section id="journey" class="reveal">
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item left" data-tilt>
+                    <div class="content">
+                        <h3>2023 - Semester 1</h3>
+                        <p>Started B.Tech journey and built a strong programming foundation with <strong>C Programming</strong>.</p>
+                        <span class="grade">SGPA: 8.58</span>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-tilt>
+                    <div class="content">
+                        <h3>2024 - Semester 2</h3>
+                        <p>Improved problem-solving skills and explored <strong>Python</strong> and basic programming concepts.</p>
+                        <span class="grade">SGPA: 8.73</span>
+                    </div>
+                </div>
+                <div class="timeline-item left" data-tilt>
+                    <div class="content">
+                        <h3>2024 - Semester 3</h3>
+                        <p>Deep dive into <strong>DSA using Java & C</strong> and core Computer Science subjects.</p>
+                        <span class="grade">SGPA: 9.04</span>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-tilt>
+                    <div class="content">
+                        <h3>2025 - Semester 4</h3>
+                        <p>Studied <strong>Operating Systems</strong> and <strong>Design & Analysis of Algorithms</strong>.</p>
+                        <span class="grade glow">SGPA: 9.46</span>
+                    </div>
+                </div>
+                <div class="timeline-item left" data-tilt>
+                    <div class="content">
+                        <h3>2025 - Semester 5</h3>
+                        <p>Explored <strong>DBMS</strong>, <strong>Computer Networks</strong>, and applied concepts in projects.</p>
+                        <span class="grade glow">SGPA: 9.32</span>
+                    </div>
+                </div>
+                <div class="timeline-item right" data-tilt>
+                    <div class="content active-sem">
+                        <h3>2026 - Semester 6</h3>
+                        <p>Currently focusing on <strong>Java backend development</strong>, building <strong>REST APIs</strong>, and working with <strong>SQL databases</strong>.</p>
+                        <span class="grade glow">SGPA: 9.14</span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="timeline-item left" data-tilt>
-            <div class="content">
-                <h3>2024 - Semester 3</h3>
-                <p>Deep dive into <strong>DSA using Java & C</strong> and core Computer Science subjects.</p>
-                <span class="grade">SGPA: 9.04</span>
+        <section id="skills" class="reveal">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="cards-container">
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-laptop-code card-icon"></i>
+                    <h3>Programming & DSA</h3>
+                    <p>Java, C, Data Structures & Algorithms, Problem Solving</p>
+                </div>
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-server card-icon"></i>
+                    <h3>Backend Development</h3>
+                    <p>Java Backend Development, REST APIs, SQL Databases</p>
+                </div>
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-brain card-icon"></i>
+                    <h3>Core Computer Science</h3>
+                    <p>DBMS, Operating Systems, Computer Networks, TOC</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="timeline-item right" data-tilt>
-            <div class="content">
-                <h3>2025 - Semester 4</h3>
-                <p>Studied <strong>Operating Systems</strong> and <strong>Design & Analysis of Algorithms</strong>.</p>
-                <span class="grade glow">SGPA: 9.46</span>
+        <!-- NEW CERTIFICATIONS SECTION INCLUDED SAFELY -->
+        <section id="certifications" class="reveal">
+            <h2 class="section-title">Licenses & Certifications</h2>
+            <div class="cards-container">
+                <div class="glass-card text-center" data-tilt>
+                    <i class="fab fa-java card-icon" style="color: #f89820;"></i>
+                    <h3 style="margin-top: 10px;">Certificate in Core Java</h3>
+                    <p>Precursor Info Solutions (A+ Grade)</p>
+                </div>
+                <div class="glass-card text-center" data-tilt>
+                    <i class="fas fa-database card-icon" style="color: #4479A1;"></i>
+                    <h3 style="margin-top: 10px;">Introduction to SQL</h3>
+                    <p>Simplilearn SkillUp</p>
+                </div>
+                <div class="glass-card text-center" data-tilt>
+                    <i class="fab fa-github card-icon" style="color: #ffffff;"></i>
+                    <h3 style="margin-top: 10px;">Introduction to GitHub</h3>
+                    <p>Simplilearn SkillUp</p>
+                </div>
+                <div class="glass-card text-center" data-tilt>
+                    <i class="fas fa-microchip card-icon" style="color: #6366f1;"></i>
+                    <h3 style="margin-top: 10px;">AI Impact Summit 2026</h3>
+                    <p>Mission Upskill India - HCL GUVI</p>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="timeline-item left" data-tilt>
-            <div class="content">
-                <h3>2025 - Semester 5</h3>
-                <p>Explored <strong>DBMS</strong>, <strong>Computer Networks</strong>, and applied concepts in projects.</p>
-                <span class="grade glow">SGPA: Coming Soon...</span>
+        <section id="tech-stack" class="reveal">
+            <h2 class="section-title">Technologies I Use</h2>
+            <div class="slider" data-tilt>
+                <div class="slide-track">
+                    <div class="slide"><i class="fab fa-java"></i><span>Java</span></div>
+                    <div class="slide"><i class="fas fa-server"></i><span>REST APIs</span></div>
+                    <div class="slide"><i class="fas fa-database"></i><span>SQL</span></div>
+                    <div class="slide"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    <div class="slide"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="slide"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                    <div class="slide"><i class="fas fa-microchip"></i><span>C Lang</span></div>
+                    <div class="slide"><i class="fab fa-python"></i><span>Python</span></div>
+                    <!-- repeat for smooth animation -->
+                    <div class="slide"><i class="fab fa-java"></i><span>Java</span></div>
+                    <div class="slide"><i class="fas fa-server"></i><span>REST APIs</span></div>
+                    <div class="slide"><i class="fas fa-database"></i><span>SQL</span></div>
+                    <div class="slide"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                    <div class="slide"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                    <div class="slide"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                    <div class="slide"><i class="fas fa-microchip"></i><span>C Lang</span></div>
+                    <div class="slide"><i class="fab fa-python"></i><span>Python</span></div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="timeline-item right" data-tilt>
-            <div class="content active-sem">
-                <h3>Present - Semester 6</h3>
-                <p>Currently focusing on <strong>Java backend development</strong>, building <strong>REST APIs</strong>, and working with <strong>SQL databases</strong>.</p>
-                <span class="grade glow">SGPA: Coming Soon...</span>
+       <section id="projects" class="reveal">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="cards-container">
+                
+                <!-- College Portal Project -->
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-user-graduate card-icon"></i>
+                    <h3>College Portal</h3>
+                    <p>Student Management System implemented using strict <strong>MVC Architecture</strong> and <strong>DAO Pattern</strong>. Features modular packages for beans, database connectivity, and servlets.</p>
+                    <div class="tags" style="margin-top: 10px; margin-bottom: 15px;">
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; margin-right: 5px;">MVC Pattern</span>
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; margin-right: 5px;">DAO</span>
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px;">Java EE</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ashutosh222006" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- ACMFinder Project -->
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-home card-icon"></i>
+                    <h3>ACMFinder (Accommodation Finder)</h3>
+                    <p>Enterprise Java web application with secure role-based access (Admin, Owner, User). Developed using clean directory structures for scalable module management.</p>
+                    <div class="tags" style="margin-top: 10px; margin-bottom: 15px;">
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; margin-right: 5px;">JSP & Servlets</span>
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; margin-right: 5px;">JDBC</span>
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px;">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ashutosh222006" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+
+                <!-- Festivo Project -->
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-project-diagram card-icon"></i>
+                    <h3>Festivo - TheUtsav</h3>
+                    <p>Developed a responsive web application showcasing global festivals using HTML, CSS, and JavaScript with modern and clean UI design principles.</p>
+                    <div class="tags" style="margin-top: 10px; margin-bottom: 15px;">
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; margin-right: 5px;">HTML5</span>
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; margin-right: 5px;">CSS3</span>
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px;">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ashutosh222006/Festivo-TheUtsav/" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://ashutosh222006.github.io/Festivo-TheUtsav/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- Currency Tracker -->
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-coins card-icon"></i>
+                    <h3>Currency Tracker</h3>
+                    <p>Built a real-time currency exchange tracker using JavaScript and REST API integration to fetch live rates for multiple currencies globally.</p>
+                    <div class="tags" style="margin-top: 10px; margin-bottom: 15px;">
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; margin-right: 5px;">REST APIs</span>
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px;">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ashutosh222006/currency-tracker/" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://ashutosh222006.github.io/currency-tracker/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
+                <!-- 3D Portfolio -->
+                <div class="glass-card" data-tilt>
+                    <i class="fas fa-globe card-icon"></i>
+                    <h3>3D Personal Portfolio</h3>
+                    <p>Designed and developed an interactive portfolio using Three.js, glassmorphism UI, and smooth animations to showcase my journey as a developer.</p>
+                    <div class="tags" style="margin-top: 10px; margin-bottom: 15px;">
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px; margin-right: 5px;">Three.js</span>
+                        <span style="font-size: 0.8rem; background: rgba(255,255,255,0.1); padding: 3px 8px; border-radius: 4px;">Glassmorphism</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ashutosh222006/Portfolio1" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://ashutosh222006.github.io/Portfolio1/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </section>
 
-    </div>
-</section>
+        <section id="appreciations" class="reveal">
+            <h2 class="section-title">Appreciations</h2>
+            <div class="cards-container">
+                <div class="glass-card testimonial-card" data-tilt>
+                    <img src="Screenshot 2025-07-19 213051.png" alt="Nitish Kumar"
+                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.2); margin-right: 15px;">
+                    <div class="testimonial-text">
+                        <h3 style="font-size: 1.1rem; color: #a855f7;">Nitish Kumar</h3>
+                        <p style="font-size: 0.85rem; color: #64748b;">LinkedIn Creator • 13K+ Audience</p>
+                        <p style="font-size: 0.9rem; color: #94a3b8;">
+                            "Appreciated my personal portfolio project and reshared it with his professional network."
+                        </p>
+                    </div>
+                </div>
 
-       <section id="skills" class="reveal">
-    <h2 class="section-title">Core Competencies</h2>
-    <div class="cards-container">
-
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-laptop-code card-icon"></i>
-            <h3>Programming & DSA</h3>
-            <p>Java, C, Data Structures & Algorithms, Problem Solving</p>
-        </div>
-
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-server card-icon"></i>
-            <h3>Backend Development</h3>
-            <p>Java Backend Development, REST APIs, SQL Databases</p>
-        </div>
-
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-brain card-icon"></i>
-            <h3>Core Computer Science</h3>
-            <p>DBMS, Operating Systems, Computer Networks, TOC</p>
-        </div>
-
-    </div>
-</section>
-
-
-       <section id="tech-stack" class="reveal">
-    <h2 class="section-title">Technologies I Use</h2>
-    <div class="slider" data-tilt>
-        <div class="slide-track">
-
-            <div class="slide"><i class="fab fa-java"></i><span>Java</span></div>
-            <div class="slide"><i class="fas fa-server"></i><span>REST APIs</span></div>
-            <div class="slide"><i class="fas fa-database"></i><span>SQL</span></div>
-            <div class="slide"><i class="fab fa-git-alt"></i><span>Git</span></div>
-            <div class="slide"><i class="fab fa-html5"></i><span>HTML5</span></div>
-            <div class="slide"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-            <div class="slide"><i class="fas fa-microchip"></i><span>C Lang</span></div>
-            <div class="slide"><i class="fab fa-python"></i><span>Python</span></div>
-
-            <!-- repeat for smooth animation -->
-            <div class="slide"><i class="fab fa-java"></i><span>Java</span></div>
-            <div class="slide"><i class="fas fa-server"></i><span>REST APIs</span></div>
-            <div class="slide"><i class="fas fa-database"></i><span>SQL</span></div>
-            <div class="slide"><i class="fab fa-git-alt"></i><span>Git</span></div>
-            <div class="slide"><i class="fab fa-html5"></i><span>HTML5</span></div>
-            <div class="slide"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-            <div class="slide"><i class="fas fa-microchip"></i><span>C Lang</span></div>
-            <div class="slide"><i class="fab fa-python"></i><span>Python</span></div>
-
-        </div>
-    </div>
-</section>
-
-
-        <section id="projects" class="reveal">
-    <h2 class="section-title">Selected Projects</h2>
-    <div class="cards-container">
-
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-project-diagram card-icon"></i>
-            <h3>Festivo - TheUtsav</h3>
-            <p>Developed a responsive web application showcasing global festivals using HTML, CSS, and JavaScript with clean UI design.</p>
-            <div class="project-links">
-                <a href="https://github.com/Ashutosh222006/Festivo-TheUtsav/" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://ashutosh222006.github.io/Festivo-TheUtsav/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                <div class="glass-card testimonial-card" data-tilt>
+                    <img src="image2.jpg" alt="Anu Sharma"
+                        style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.2); margin-right: 15px;">
+                    <div class="testimonial-text">
+                        <h3 style="font-size: 1.1rem; color: #6366f1;">Anu Sharma</h3>
+                        <p style="font-size: 0.85rem; color: #64748b;">Software Engineer @ Google</p>
+                        <p style="font-size: 0.9rem; color: #94a3b8;">
+                            "Appreciated my currency tracker project and encouraged my consistency in learning and building projects."
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
 
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-coins card-icon"></i>
-            <h3>Currency Tracker</h3>
-            <p>Built a real-time currency exchange tracker using JavaScript and REST API integration to fetch live rates for multiple currencies.</p>
-            <div class="project-links">
-                <a href="https://github.com/Ashutosh222006/currency-tracker/" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://ashutosh222006.github.io/currency-tracker/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+        <section id="library" class="reveal">
+            <h2 class="section-title">Core CS Knowledge Base</h2>
+            <p class="text-center" style="margin-bottom: 2rem; color: var(--text-muted);">
+                Books & resources that shape my technical foundation as a backend developer.
+            </p>
+            <div class="cards-container academic-grid">
+                <div class="glass-card book-card" data-tilt>
+                    <div class="book-cover gradient-1">
+                        <i class="fas fa-microchip"></i><span>Operating Systems</span>
+                    </div>
+                    <div class="book-info">
+                        <h3>Operating System Concepts</h3>
+                        <p>Silberschatz & Galvin</p>
+                        <div class="tags"><span>Processes</span><span>Threads</span><span>Concurrency</span></div>
+                    </div>
+                </div>
+                <div class="glass-card book-card" data-tilt>
+                    <div class="book-cover gradient-2">
+                        <i class="fas fa-code-branch"></i><span>Algorithms</span>
+                    </div>
+                    <div class="book-info">
+                        <h3>Introduction to Algorithms</h3>
+                        <p>CLRS (Cormen)</p>
+                        <div class="tags"><span>Graphs</span><span>DP</span><span>Complexity</span></div>
+                    </div>
+                </div>
+                <div class="glass-card book-card" data-tilt>
+                    <div class="book-cover gradient-3">
+                        <i class="fas fa-database"></i><span>Database Systems</span>
+                    </div>
+                    <div class="book-info">
+                        <h3>Database System Concepts</h3>
+                        <p>Korth & Sudarshan</p>
+                        <div class="tags"><span>SQL</span><span>Normalization</span><span>Indexing</span></div>
+                    </div>
+                </div>
+                <div class="glass-card book-card" data-tilt>
+                    <div class="book-cover gradient-4">
+                        <i class="fas fa-network-wired"></i><span>Networks</span>
+                    </div>
+                    <div class="book-info">
+                        <h3>Computer Networks</h3>
+                        <p>Tanenbaum</p>
+                        <div class="tags"><span>TCP/IP</span><span>OSI Model</span><span>HTTP</span></div>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <div class="glass-card" data-tilt>
-            <i class="fas fa-globe card-icon"></i>
-            <h3>3D Personal Portfolio</h3>
-            <p>Designed and developed an interactive portfolio using Three.js, glassmorphism UI, and smooth animations to showcase projects.</p>
-            <div class="project-links">
-                <a href="https://github.com/Ashutosh222006/Portfolio1" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://ashutosh222006.github.io/Portfolio1/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-       <section id="appreciations" class="reveal">
-    <h2 class="section-title">Appreciations</h2>
-    <div class="cards-container">
-
-        <div class="glass-card testimonial-card" data-tilt>
-            <img src="Screenshot 2025-07-19 213051.png" alt="Nitish Kumar"
-                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.2); margin-right: 15px;">
-            <div class="testimonial-text">
-                <h3 style="font-size: 1.1rem; color: #a855f7;">Nitish Kumar</h3>
-                <p style="font-size: 0.85rem; color: #64748b;">LinkedIn Creator • 13K+ Audience</p>
-                <p style="font-size: 0.9rem; color: #94a3b8;">
-                    "Appreciated my personal portfolio project and reshared it with his professional network."
-                </p>
-            </div>
-        </div>
-
-        <div class="glass-card testimonial-card" data-tilt>
-            <img src="image2.jpg" alt="Anu Sharma"
-                style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255,255,255,0.2); margin-right: 15px;">
-            <div class="testimonial-text">
-                <h3 style="font-size: 1.1rem; color: #6366f1;">Anu Sharma</h3>
-                <p style="font-size: 0.85rem; color: #64748b;">Software Engineer @ Google</p>
-                <p style="font-size: 0.9rem; color: #94a3b8;">
-                    "Appreciated my currency tracker project and encouraged my consistency in learning and building projects."
-                </p>
-            </div>
-        </div>
-
-    </div>
-</section>
-<section id="library" class="reveal">
-    <h2 class="section-title">Core CS Knowledge Base</h2>
-    <p class="text-center" style="margin-bottom: 2rem; color: var(--text-muted);">
-        Books & resources that shape my technical foundation as a backend developer.
-    </p>
-
-    <div class="cards-container academic-grid">
-
-        <div class="glass-card book-card" data-tilt>
-            <div class="book-cover gradient-1">
-                <i class="fas fa-microchip"></i><span>Operating Systems</span>
-            </div>
-            <div class="book-info">
-                <h3>Operating System Concepts</h3>
-                <p>Silberschatz & Galvin</p>
-                <div class="tags"><span>Processes</span><span>Threads</span><span>Concurrency</span></div>
-            </div>
-        </div>
-
-        <div class="glass-card book-card" data-tilt>
-            <div class="book-cover gradient-2">
-                <i class="fas fa-code-branch"></i><span>Algorithms</span>
-            </div>
-            <div class="book-info">
-                <h3>Introduction to Algorithms</h3>
-                <p>CLRS (Cormen)</p>
-                <div class="tags"><span>Graphs</span><span>DP</span><span>Complexity</span></div>
-            </div>
-        </div>
-
-        <div class="glass-card book-card" data-tilt>
-            <div class="book-cover gradient-3">
-                <i class="fas fa-database"></i><span>Database Systems</span>
-            </div>
-            <div class="book-info">
-                <h3>Database System Concepts</h3>
-                <p>Korth & Sudarshan</p>
-                <div class="tags"><span>SQL</span><span>Normalization</span><span>Indexing</span></div>
-            </div>
-        </div>
-
-        <div class="glass-card book-card" data-tilt>
-            <div class="book-cover gradient-4">
-                <i class="fas fa-network-wired"></i><span>Networks</span>
-            </div>
-            <div class="book-info">
-                <h3>Computer Networks</h3>
-                <p>Tanenbaum</p>
-                <div class="tags"><span>TCP/IP</span><span>OSI Model</span><span>HTTP</span></div>
-            </div>
-        </div>
-
-    </div>
-</section>
-
+        </section>
 
         <section id="faq" class="reveal">
-    <h2 class="section-title">Common Queries</h2>
-    <div class="faq-container">
-
-        <div class="glass-card faq-item" onclick="toggleFaq(this)">
-            <div class="faq-question">
-                <h3><i class="fas fa-question-circle"></i> Are you open to internships?</h3>
-                <span class="toggle-icon">+</span>
+            <h2 class="section-title">Common Queries</h2>
+            <div class="faq-container">
+                <div class="glass-card faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-question-circle"></i> Are you open to internships?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! I am actively looking for internship opportunities in Java Backend or Software Development roles.</p>
+                    </div>
+                </div>
+                <div class="glass-card faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-calendar-check"></i> When can you join?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I am available to join immediately and can manage internships alongside my academic schedule.</p>
+                    </div>
+                </div>
+                <div class="glass-card faq-item" onclick="toggleFaq(this)">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-laptop-code"></i> What is your primary tech stack?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>My primary focus is Java backend development, including REST APIs, SQL databases, and core Computer Science fundamentals.</p>
+                    </div>
+                </div>
             </div>
-            <div class="faq-answer">
-                <p>Yes! I am actively looking for internship opportunities in Java Backend or Software Development roles.</p>
-            </div>
-        </div>
-
-        <div class="glass-card faq-item" onclick="toggleFaq(this)">
-            <div class="faq-question">
-                <h3><i class="fas fa-calendar-check"></i> When can you join?</h3>
-                <span class="toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>I am available to join immediately and can manage internships alongside my academic schedule.</p>
-            </div>
-        </div>
-
-        <div class="glass-card faq-item" onclick="toggleFaq(this)">
-            <div class="faq-question">
-                <h3><i class="fas fa-laptop-code"></i> What is your primary tech stack?</h3>
-                <span class="toggle-icon">+</span>
-            </div>
-            <div class="faq-answer">
-                <p>My primary focus is Java backend development, including REST APIs, SQL databases, and core Computer Science fundamentals.</p>
-            </div>
-        </div>
-
-    </div>
-</section>
-
+        </section>
 
         <section id="contact" class="reveal">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="contact-container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container">
+                <div class="glass-card contact-info" data-tilt>
+                    <h3>Let's Connect</h3>
+                    <p>Have an opportunity or want to discuss software development projects? Feel free to reach out!</p>
 
-        <div class="glass-card contact-info" data-tilt>
-            <h3>Let's Connect</h3>
-            <p>Have an opportunity or want to discuss software development projects? Feel free to reach out!</p>
+                    <div class="info-item"><i class="fas fa-envelope"></i><span>pvcashu22@gmail.com</span></div>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Lucknow, India</span></div>
+                    <div class="info-item"><i class="fas fa-briefcase"></i><span>Open for Internships</span></div>
 
-            <div class="info-item"><i class="fas fa-envelope"></i><span>pvcashu22@gmail.com</span></div>
-            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span>Lucknow, India</span></div>
-            <div class="info-item"><i class="fas fa-briefcase"></i><span>Open for Internships</span></div>
+                    <div class="social-icons-contact" style="font-size: 1.5rem; margin-top: 20px; display: flex; gap: 15px;">
+                        <a href="https://github.com/Ashutosh222006" target="_blank" style="color: white;"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ashutosh-shukla-21385426a" target="_blank" style="color: #0077b5;"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://leetcode.com/u/pvc_ashu/" target="_blank" style="color: #f89f1b;"><i class="fas fa-code"></i></a>
+                    </div>
+                </div>
 
-            <div class="social-icons-contact">
-                <a href="https://github.com/Ashutosh222006" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/YOUR-LINKEDIN-ID" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <form class="glass-card contact-form" onsubmit="sendMail(event)">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="message" rows="4" placeholder="Hi Ashutosh, I'd like to connect regarding an opportunity..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
             </div>
-        </div>
-
-        <form class="glass-card contact-form" onsubmit="sendMail(event)">
-            <div class="form-group">
-                <label>Your Name</label>
-                <input type="text" id="name" placeholder="John Doe" required>
-            </div>
-            <div class="form-group">
-                <label>Your Email</label>
-                <input type="email" id="email" placeholder="john@example.com" required>
-            </div>
-            <div class="form-group">
-                <label>Message</label>
-                <textarea id="message" rows="4" placeholder="Hi Ashutosh, I'd like to connect regarding an opportunity..."
-                    required></textarea>
-            </div>
-            <button type="submit" class="btn btn-full">Send Message <i class="fas fa-paper-plane"></i></button>
-        </form>
-
-    </div>
-</section>
-
-
+        </section>
     </main>
 
     <footer>
@@ -425,8 +490,7 @@ Alongside academics, I continuously improve my technical skills through hands-on
     <div class="chatbot" id="chatbot">
         <div class="chat-header">
             <span>Ashutosh AI</span>
-            <span class="close-chat"
-                onclick="document.getElementById('chatbot').classList.remove('show')">&times;</span>
+            <span class="close-chat" onclick="document.getElementById('chatbot').classList.remove('show')">&times;</span>
         </div>
         <div class="chat-messages" id="chat-messages">
             <div class="bot-message">Hello! I am Ashutosh's AI Assistant. Ask me about his Skills, SGPA, or Projects! 🤖
@@ -437,5 +501,4 @@ Alongside academics, I continuously improve my technical skills through hands-on
 
     <script src="script.js"></script>
 </body>
-
 </html>
