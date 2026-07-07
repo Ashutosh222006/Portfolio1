@@ -184,7 +184,7 @@ function getSmartReply(text) {
 
     // 2. Identity (Ashutosh)
     if (text.includes("who is ashutosh") || text.includes("about")) 
-        return "Ashutosh Shukla is a **Final Year B.Tech CSE Student** 🎓, Gen AI Developer, and a smart Trader. 9.6 SGPA holder hai banda! 😎";
+        return "Ashutosh Shukla is a **Final Year B.Tech CSE Student** 🎓, Gen AI Developer, and a smart Trader. ~9.0 CGPA holder hai banda! 😎";
 
     // 3. Projects
     if (text.includes("project") || text.includes("work")) 
@@ -256,10 +256,6 @@ function typeWriter() {
 document.addEventListener('DOMContentLoaded', typeWriter);
 
 
-
-
-
-
 // --- ULTRA WOW: REMOVE BOOT SCREEN ---
 window.addEventListener('load', () => {
     const bootScreen = document.getElementById('boot-screen');
@@ -273,7 +269,7 @@ window.addEventListener('load', () => {
             bootScreen.style.display = "none";
         }, 800);
         
-    }, 2800); // Animation time se match kiya
+    }, 1500); // Animation time se match kiya
 });
 
 // --- HEADER WOW: SCROLL PROGRESS BAR ---
